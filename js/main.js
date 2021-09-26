@@ -19,6 +19,7 @@ const nextBtn = document.querySelector('.next-btn');
 
 		//image slider nextBtn
 		nextBtn.addEventListener("click", function(){
+
 			slides.forEach((slide) => {
 				slide.classList.remove("active");
 			});
@@ -101,13 +102,25 @@ shareBtn.onclick = () => {
 	socialMedia.classList.toggle('active');
 }
 
+const openMenu = document.querySelector('.open-menu');
+const closeMenu = document.querySelector('.close-menu');
 const menuBar = document.querySelector('.menu-bar');
 const nav = document.querySelector('nav');
 const titles = document.querySelectorAll('.list .title');
 
-menuBar.onclick = () => {
+openMenu.onclick = () => {
 	nav.classList.toggle('active');
-	menuBar.classList.toggle('active');
+	openMenu.classList.toggle('active');
+	closeMenu.classList.toggle('active');
 	titles.classList.toggle('active');
+	menuBar.classList.toggle('active');
+}
+
+closeMenu.onclick = () => {
+	nav.classList.toggle('active');
+	closeMenu.classList.toggle('active');
+	openMenu.classList.toggle('active');
+	titles.classList.toggle('active');
+	menuBar.classList.toggle('active');
 }
 

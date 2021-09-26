@@ -283,6 +283,25 @@ main section:target .content .image:hover:before
 		transition: 1s;
 		z-index: 20;
 	}
+
+	.open-menu {
+		display: block;
+	}
+
+	.open-menu.active 
+	{
+		display: none;
+	}
+
+	.close-menu {
+		display: none;
+	}
+
+	.close-menu.active
+	{
+		display: block;
+	}
+
 	.container nav
 	{
 		position: absolute;
@@ -377,6 +396,11 @@ main section:target .content .image:hover:before
 
 @media (max-width: 420px)
 {
+	.container 
+	{
+		width: 100%;
+	}
+
 	.menu-bar.active 
 	{
 		left: 70%;
@@ -656,6 +680,7 @@ main section:target .content .image:hover:before
 
 .progressbar .box li .bar1 
 {
+	left: 0;
 	animation: bar1 .8s linear;
 	animation-fill-mode: forwards;
 }
@@ -668,6 +693,7 @@ main section:target .content .image:hover:before
 
 .progressbar .box li .bar2 
 {
+	left: 0;
 	animation: bar2 .8s linear;
 	animation-fill-mode: forwards;
 	background: #fafafa;
@@ -681,6 +707,7 @@ main section:target .content .image:hover:before
 
 .progressbar .box li .bar3 
 {
+	left: 0;
 	animation: bar3 .8s linear;
 	animation-fill-mode: forwards;
 }
@@ -693,6 +720,7 @@ main section:target .content .image:hover:before
 
 .progressbar .box li .bar4 
 {
+	left: 0;
 	animation: bar4 .8s linear;
 	animation-fill-mode: forwards;
 	background: #fafafa;
@@ -706,6 +734,7 @@ main section:target .content .image:hover:before
 
 .progressbar .box li .bar5 
 {
+	left: 0;
 	animation: bar5 .8s linear;
 	animation-fill-mode: forwards;
 }
@@ -807,13 +836,12 @@ main section:target .content .image:hover:before
 .slider 
 {
 	position: relative;
-	background: rgba(255,255,255,.8);
+	background: transparent;
 	width: 600px;
 	height: 350px;
 	margin: 20px;
 	overflow: hidden;
 	border-radius: 10px;
-	border: 2px solid #fff;
 }
 
 .slider .slide 
@@ -822,17 +850,18 @@ main section:target .content .image:hover:before
 	padding: 0px 10px 0 10px;
 	width: 100%;
 	height: 100%;
-	clip-path: circle(0% at 0 50%);
+	clip-path: circle(0% at 50% 50%);
 }
 
 .slider .slide.active
 {
-	clip-path: circle(150% at 0 50%);
+	clip-path: circle(150% at 50% 50%);
 	transition: 2s;
 }
 
 .slider .slide img 
 {
+	border: 2px solid #fff;
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -944,11 +973,6 @@ main section:target .content .image:hover:before
 
 @media (max-width: 500px)
 {
-	.slider 
-	{
-		width: 200%;
-	}
-
 	.slider .slide .info h2 
 	{
 		font-size: 1.8em;
@@ -1189,6 +1213,8 @@ main section:target .content .image:hover:before
 {
 	.social-media 
 	{
+		background: white;
+		border-radius: 10px 10px 0 10px;
 		opacity: 0;
 	}
 
