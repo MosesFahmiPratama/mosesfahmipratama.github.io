@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Accounting Web Apps</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body{
+			overflow-x: hidden;
+			background: linear-gradient(45deg, rgba(190,190,190,.7),rgba(28,191,195,.5));
+			padding: 20px;
+		}
+
+		.container{
+			display: flex;
+			flex-direction: column;
+			background: rgba(255, 255, 255, .6);
+			padding: 20px;
+			width: 100%;
+			height: 100%;
+		}
+
+		header{
+			text-align: center;
+			font-size: 2em;
+			color: white;
+			text-shadow: 2px 2px 0 #1cbfc3, 
+						-2px -2px 0 #1cbfc3;
+			margin-bottom: 20px;
+		}
+
+		.content{
+			display: flex;
+			margin: 20px 0 20px 0;
+		}
+
+		.content:nth-child(even){
+			display: flex;
+			flex-direction: row-reverse;
+			margin: 20px 0 20px 0;
+		}
+
+		.content .description{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.content .description p{
+			padding: 20px;
+		}
+
+		.content .description h3{
+			text-align: center;
+			color: #313131;
+			font-size: 1.5em;
+		}
+
+		.content .image{
+			width: 100%;
+		}
+
+		.content .line{
+			transition: .5s;
+			background: linear-gradient(-45deg, transparent 40%, rgba(0,0,0,.6) 40%, rgba(0,0,0,.6) 50%, transparent 50%);
+			background-color: rgba(255, 255, 255, .3);
+			background-size: 400% 400%;
+			background-position: 90% 90%;
+			animation: animate 2s ease infinite;
+		}
+
+		.content .line:hover {
+			padding: 10px;
+		}
+
+		@keyframes animate {
+			to{
+				background-position: 25% 25%;
+			}
+		}
+
+		.content .image img {
+			width: 100%;
+			height: 100%;
+			border-radius: 5px;
+		}
+
+		@media (max-width: 900px) {
+			.content{
+				flex-direction: column;
+			}
+			.content:nth-child(even){
+				flex-direction: column;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>Accounting Web Apps</header>
+		<main>
+			<div class="content">
+				<div class="image line">
+					<img src="img/projek/accounting/1.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Login Form</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut pariatur recusandae, rem dolor earum modi veritatis consequatur eaque, iste fuga tenetur! Praesentium laborum earum quaerat, iste sunt, soluta nesciunt asperiores?</p>
+				</div>
+			</div>
+			<div class="content">
+				<div class="image line">
+					<img src="img/projek/accounting/2.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Dashboard Aplikasi</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut pariatur recusandae, rem dolor earum modi veritatis consequatur eaque, iste fuga tenetur! Praesentium laborum earum quaerat, iste sunt, soluta nesciunt asperiores?</p>
+				</div>
+			</div>
+			<div class="content">
+				<div class="image line">
+					<img src="img/projek/accounting/3.jpg" alt="">
+				</div>
+				<div class="description">
+					<h3>Data Kode Akun</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut pariatur recusandae, rem dolor earum modi veritatis consequatur eaque, iste fuga tenetur! Praesentium laborum earum quaerat, iste sunt, soluta nesciunt asperiores?</p>
+				</div>
+			</div>
+		</main>
+		<div class="footer">
+			Created &reg By Moses Fahmi Pratama 
+		</div>
+	</div>
+</body>
+</html>
