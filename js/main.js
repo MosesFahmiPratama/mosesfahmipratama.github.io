@@ -4,11 +4,11 @@ window.onload = () => {
 	welcome.classList.add('active');
 }
 
-function closeWelcome(){
+/*function closeWelcome(){
 	welcome.classList.remove('active');
 }
 
-setTimeout('closeWelcome()',5000);
+setTimeout('closeWelcome()',5000);*/
 
 const nextBtn = document.querySelector('.next-btn');
 		const prevBtn = document.querySelector('.prev-btn');
@@ -92,6 +92,8 @@ for (let i = 0; i < list.length; i++) {
 			list[j++].className = 'list';
 		}
 		list[i].className = 'list active';
+
+		welcome.classList.remove('active');
 	}
 }
 

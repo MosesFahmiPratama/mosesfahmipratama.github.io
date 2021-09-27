@@ -196,6 +196,12 @@ main section:target .content
 	width: 90%;
 }
 
+
+@keyframes fadeIn
+{
+	100% {opacity: 1;}
+}
+
 main section header 
 {
 	font-size: 2em;
@@ -209,11 +215,6 @@ main section header
 main section p 
 {
 	margin-top: 20px;
-}
-
-@keyframes fadeIn
-{
-	100% {opacity: 1;}
 }
 
 main section:target .content .side-content 
@@ -265,6 +266,19 @@ main section:target .content .image:hover:before
 	background-size: cover;
 	border-radius: 10px;
 }
+
+/*#about {
+	background: white;
+}
+#skill {
+	background: white;
+}
+#portofolio {
+	background: white;
+}
+#contact {
+	background: white;
+}*/
 
 @media (max-width: 768px)
 {
@@ -337,7 +351,8 @@ main section:target .content .image:hover:before
 
 	main section header
 	{
-		top: -5%;
+		top: 5%;
+		text-align: center;
 	}
 
 	main section:target .content 
